@@ -5,7 +5,7 @@ const srv = express();
 const csv = require('csv-parser')
 const fs = require('fs')
 
-const addDataRoute = require('./routes/addData')
+const addDataRoute = require('./addData')
 // const mlModel = require('./routes/mlModel')
 
 srv.use(express.json())
@@ -22,5 +22,5 @@ srv.use('/donate',express.static(__dirname+'/public/bulu'))
 // srv.use('/todos', todoRoute)
 
 srv.listen(4567,()=>{
-    console.log('server started')
+    console.log('server started at http://localhost:4567')
 });
